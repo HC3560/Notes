@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../class_hdmi.srcs/sources_1/ip/sys_clk" \
+"../../../../class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk_clk_wiz.v" \
+"../../../../class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk.v" \
+"../../../../class_hdmi.srcs/sources_1/i2c_master/i2c_config.v" \
+"../../../../class_hdmi.srcs/sources_1/i2c_master/i2c_master_bit_ctrl.v" \
+"../../../../class_hdmi.srcs/sources_1/i2c_master/i2c_master_byte_ctrl.v" \
+"../../../../class_hdmi.srcs/sources_1/i2c_master/i2c_master_top.v" \
+"../../../../class_hdmi.srcs/sources_1/i2c_master/lut_sil9134.v" \
+"../../../../class_hdmi.srcs/sources_1/new/src_gen.v" \
+"../../../../class_hdmi.srcs/sources_1/new/src.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
