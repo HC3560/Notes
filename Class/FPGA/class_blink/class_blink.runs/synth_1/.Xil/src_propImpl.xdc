@@ -1,5 +1,0 @@
-set_property SRC_FILE_INFO {cfile:D:/Xilinx/Projects/class_blink/class_blink.srcs/constrs_1/new/src.xdc rfile:../../../class_blink.srcs/constrs_1/new/src.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN A5 [get_ports out]
-set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
-set_property IOSTANDARD LVCOMOS33 [get_ports out]
