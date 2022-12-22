@@ -137,58 +137,58 @@ module src_gen(
         de <= h_active & v_active;
     
     /*
-            always@(posedge clk)
-            begin
-                    if(h_cnt>H_FP+H_SYNC+H_BP-1 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*1)
-                    begin
-                        rgb_r <= RED_R;
-                        rgb_g <= RED_G;
-                        rgb_b <= RED_B;
-                    end
-                    else if(h_cnt>H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*1 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*2)
-                    begin
-                        rgb_r <= YELLOW_R;
-                        rgb_g <= YELLOW_G;
-                        rgb_b <= YELLOW_B;
-                    end
-                    else if(h_cnt>H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*2 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*3)
-                    begin
-                        rgb_r <= CYAN_R;
-                        rgb_g <= CYAN_G;
-                        rgb_b <= CYAN_B;
-                    end
-                    else if(h_cnt>H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*3 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*4)
-                    begin
-                        rgb_r <= GREEN_R;
-                        rgb_g <= GREEN_G;
-                        rgb_b <= GREEN_B;
-                    end
-                    else if(h_cnt>H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*4 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*5)
-                    begin
-                        rgb_r <= MAGENTA_R;
-                        rgb_g <= MAGENTA_G;
-                        rgb_b <= MAGENTA_B;
-                    end
-                    else if(h_cnt>H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*5 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*6)
-                    begin
-                        rgb_r <= WHITE_R;
-                        rgb_g <=WHITE_G;
-                        rgb_b <= WHITE_B;
-                    end
-                    else if(h_cnt>H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*6 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*7)
-                    begin
-                        rgb_r <= BLUE_R;
-                        rgb_g <= BLUE_G;
-                        rgb_b <= BLUE_B;
-                    end
-                    else if(h_cnt>H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*7 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*8)
-                    begin
-                        rgb_r <= BLACK_R;
-                        rgb_g <= BLACK_G;
-                        rgb_b <= BLACK_B;
-                    end   
-            end
-            */
+    always@(posedge clk)
+    begin
+        if(h_cnt>H_FP+H_SYNC+H_BP-1 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*1)
+        begin
+            rgb_r <= RED_R;
+            rgb_g <= RED_G;
+            rgb_b <= RED_B;
+        end
+        else if(h_cnt>H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*1 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*2)
+        begin
+            rgb_r <= YELLOW_R;
+            rgb_g <= YELLOW_G;
+            rgb_b <= YELLOW_B;
+        end
+        else if(h_cnt>H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*2 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*3)
+        begin
+            rgb_r <= CYAN_R;
+            rgb_g <= CYAN_G;
+            rgb_b <= CYAN_B;
+        end
+        else if(h_cnt>H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*3 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*4)
+        begin
+            rgb_r <= GREEN_R;
+            rgb_g <= GREEN_G;
+            rgb_b <= GREEN_B;
+        end
+        else if(h_cnt>H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*4 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*5)
+        begin
+            rgb_r <= MAGENTA_R;
+            rgb_g <= MAGENTA_G;
+            rgb_b <= MAGENTA_B;
+        end
+        else if(h_cnt>H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*5 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*6)
+        begin
+            rgb_r <= WHITE_R;
+            rgb_g <=WHITE_G;
+            rgb_b <= WHITE_B;
+        end
+        else if(h_cnt>H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*6 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*7)
+        begin
+            rgb_r <= BLUE_R;
+            rgb_g <= BLUE_G;
+            rgb_b <= BLUE_B;
+        end
+        else if(h_cnt>H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*7 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*8)
+        begin
+            rgb_r <= BLACK_R;
+            rgb_g <= BLACK_G;
+            rgb_b <= BLACK_B;
+        end
+    end
+    */
     
     reg [11:0] frame_h_cnt;
     always@(posedge vs)
@@ -209,13 +209,13 @@ module src_gen(
     end
     
     reg [11:0] frame_s_cnt;
-        always@(posedge vs)
-        begin
-            if(frame_s_cnt == 1920 + 1080)
-                frame_s_cnt <= 0;
-            else
-                frame_s_cnt <= frame_s_cnt+1;
-        end
+    always@(posedge vs)
+    begin
+        if(frame_s_cnt == 1920 + 1080)
+            frame_s_cnt <= 0;
+        else
+            frame_s_cnt <= frame_s_cnt+1;
+    end
     
     always@(posedge clk)
     begin
@@ -226,11 +226,11 @@ module src_gen(
             rgb_b <= WHITE_B;
         end
         else if(v_cnt>V_FP+V_SYNC+V_BP-1+frame_v_cnt/10 && v_cnt<=V_FP+V_SYNC+V_BP-1+WIDTH+frame_v_cnt/10)
-           begin
-               rgb_r <= WHITE_R;
-               rgb_g <= WHITE_G;
-               rgb_b <= WHITE_B;
-           end
+        begin
+           rgb_r <= WHITE_R;
+           rgb_g <= WHITE_G;
+           rgb_b <= WHITE_B;
+        end
         else
         begin
             rgb_r <= BLACK_R;
@@ -238,10 +238,10 @@ module src_gen(
             rgb_b <= BLACK_B;
         end
         if(h_cnt-(H_FP+H_SYNC+H_BP-1)-frame_s_cnt+1080==v_cnt-(V_FP+V_SYNC+V_BP-1))
-                begin
-                    rgb_r <= WHITE_R;
-                    rgb_g <= WHITE_G;
-                    rgb_b <= WHITE_B;
-                end
+        begin
+            rgb_r <= WHITE_R;
+            rgb_g <= WHITE_G;
+            rgb_b <= WHITE_B;
+        end
     end
 endmodule
