@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:text="@string/btn_1"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_1"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn_2"
+        android:text="@string/btn_2"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_2"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn_3"
+        android:text="@string/btn_3"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_3"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_pressed_teal"
+        android:text="@string/btn_4"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_4"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_pressed_teal"
+        android:onClick="showToast"
+        android:text="@string/btn_5"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_5"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_pressed_teal"
+        android:text="@string/btn_6"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_6"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_pressed_teal"
+        android:gravity="center"
+        android:text="@string/tv"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+</RelativeLayout>
