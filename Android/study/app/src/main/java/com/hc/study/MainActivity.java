@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnImageView;
     private Button mBtnListView;
     private Button mBtnGridView;
+    private Button mBtnScrollView;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnImageView = findViewById(R.id.btn_imageview);
         mBtnListView = findViewById(R.id.btn_listview);
         mBtnGridView = findViewById(R.id.btn_gridview);
+        mBtnScrollView = findViewById(R.id.btn_scrollview);
         // 调用setListeners()
         setListeners();
     }
@@ -99,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnImageView.setOnClickListener(onClick);
         mBtnListView.setOnClickListener(onClick);
         mBtnGridView.setOnClickListener(onClick);
+        mBtnScrollView.setOnClickListener(onClick);
     }
 
     // 编写OnClick类，实现View.OnClickListener()接口，实例化后可以传入.setOnClickListener()中
@@ -126,6 +129,8 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(MainActivity.this, ListViewActivity.class);
             if (id == R.id.btn_gridview)
                 intent = new Intent(MainActivity.this, GridViewActivity.class);
+            if (id == R.id.btn_scrollview)
+                intent = new Intent(MainActivity.this, ScrollViewActivity.class);
             // 开始执行对应id的Activity
             startActivity(intent);
         }
