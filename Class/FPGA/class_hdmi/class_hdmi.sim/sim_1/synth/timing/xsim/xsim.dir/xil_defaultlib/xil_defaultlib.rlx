@@ -1,0 +1,6 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.v,1675958245,verilog,,D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sim_1/new/tb_src.v,,IOBUF_HD1;IOBUF_UNIQ_BASE_;glbl;i2c_config;i2c_master_bit_ctrl;i2c_master_byte_ctrl;i2c_master_top;src;src_gen;sys_clk;sys_clk_sys_clk_clk_wiz,,,../../../../../class_hdmi.srcs/sources_1/ip/sys_clk,,,,,
+D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sim_1/new/tb_src.v,1675957874,verilog,,,,tb_src,,,../../../../../class_hdmi.srcs/sources_1/ip/sys_clk,,,,,

@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IOBUF_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module IOBUF_HD1
+INFO: [VRFC 10-311] analyzing module i2c_config
+INFO: [VRFC 10-311] analyzing module i2c_master_bit_ctrl
+INFO: [VRFC 10-311] analyzing module i2c_master_byte_ctrl
+INFO: [VRFC 10-311] analyzing module i2c_master_top
+INFO: [VRFC 10-311] analyzing module src
+INFO: [VRFC 10-311] analyzing module src_gen
+INFO: [VRFC 10-311] analyzing module sys_clk
+INFO: [VRFC 10-311] analyzing module sys_clk_sys_clk_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sim_1/new/tb_src.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_src

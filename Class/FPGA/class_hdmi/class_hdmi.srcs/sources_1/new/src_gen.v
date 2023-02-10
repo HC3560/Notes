@@ -136,7 +136,21 @@ module src_gen(
     always@(posedge clk)
         de <= h_active & v_active;
     
-    /*
+    // Image output
+    
+    /* 1. Solid color
+    always@(posedge clk)
+            begin
+        //        rgb_r <= 8'hff;
+        //        rgb_g <= 8'hff;
+        //        rgb_b <= 8'hff;
+                rgb_r <= 8'hff;
+                rgb_g <= 8'h00;
+                rgb_b <= 8'h00;
+            end
+    */
+    
+    /* 2. Color stripe
     always@(posedge clk)
     begin
         if(h_cnt>H_FP+H_SYNC+H_BP-1 && h_cnt<H_FP+H_SYNC+H_BP-1+(H_ACTIVE/8)*1)
@@ -190,6 +204,7 @@ module src_gen(
     end
     */
     
+    // 3. Dynamic fringe
     reg [11:0] frame_h_cnt;
     always@(posedge vs)
     begin
@@ -244,4 +259,5 @@ module src_gen(
             rgb_b <= WHITE_B;
         end
     end
+
 endmodule
