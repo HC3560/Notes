@@ -1,0 +1,889 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Feb  9 23:20:49 2023
+# Process ID: 22208
+# Current directory: D:/Xilinx/Projects/class_hdmi
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21640 D:\Xilinx\Projects\class_hdmi\class_hdmi.xpr
+# Log file: D:/Xilinx/Projects/class_hdmi/vivado.log
+# Journal file: D:/Xilinx/Projects/class_hdmi\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Xilinx/Projects/class_hdmi/class_hdmi.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 788.195 ; gain = 108.070
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/timescale.v] -no_script -reset -force -quiet
+remove_files  D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/timescale.v
+file delete -force D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/timescale.v
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Thu Feb  9 23:23:51 2023] Launched synth_1...
+Run output will be captured here: D:/Xilinx/Projects/class_hdmi/class_hdmi.runs/synth_1/runme.log
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z015clg485-2
+Top: src
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 979.336 ; gain = 107.449
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'src' [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/new/src.v:23]
+INFO: [Synth 8-638] synthesizing module 'sys_clk' [D:/Xilinx/Projects/class_hdmi/.Xil/Vivado-22208-HC-R7000/realtime/sys_clk_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'sys_clk' (1#1) [D:/Xilinx/Projects/class_hdmi/.Xil/Vivado-22208-HC-R7000/realtime/sys_clk_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'src_gen' [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/new/src_gen.v:22]
+	Parameter H_ACTIVE bound to: 16'b0000011110000000 
+	Parameter H_FP bound to: 16'b0000000001011000 
+	Parameter H_SYNC bound to: 16'b0000000000101100 
+	Parameter H_BP bound to: 16'b0000000010010100 
+	Parameter V_ACTIVE bound to: 16'b0000010000111000 
+	Parameter V_FP bound to: 16'b0000000000000100 
+	Parameter V_SYNC bound to: 16'b0000000000000101 
+	Parameter V_BP bound to: 16'b0000000000100100 
+	Parameter H_TOTAL bound to: 16'b0000100010011000 
+	Parameter V_TOTAL bound to: 16'b0000010001100101 
+	Parameter WHITE_R bound to: 8'b11111111 
+	Parameter WHITE_G bound to: 8'b11111111 
+	Parameter WHITE_B bound to: 8'b11111111 
+	Parameter YELLOW_R bound to: 8'b11111111 
+	Parameter YELLOW_G bound to: 8'b11111111 
+	Parameter YELLOW_B bound to: 8'b00000000 
+	Parameter CYAN_R bound to: 8'b00000000 
+	Parameter CYAN_G bound to: 8'b11111111 
+	Parameter CYAN_B bound to: 8'b11111111 
+	Parameter GREEN_R bound to: 8'b00000000 
+	Parameter GREEN_G bound to: 8'b11111111 
+	Parameter GREEN_B bound to: 8'b00000000 
+	Parameter MAGENTA_R bound to: 8'b11111111 
+	Parameter MAGENTA_G bound to: 8'b00000000 
+	Parameter MAGENTA_B bound to: 8'b11111111 
+	Parameter RED_R bound to: 8'b11111111 
+	Parameter RED_G bound to: 8'b00000000 
+	Parameter RED_B bound to: 8'b00000000 
+	Parameter BLUE_R bound to: 8'b00000000 
+	Parameter BLUE_G bound to: 8'b00000000 
+	Parameter BLUE_B bound to: 8'b11111111 
+	Parameter BLACK_R bound to: 8'b00000000 
+	Parameter BLACK_G bound to: 8'b00000000 
+	Parameter BLACK_B bound to: 8'b00000000 
+	Parameter WIDTH bound to: 4'b0001 
+INFO: [Synth 8-4471] merging register 'rgb_g_reg[7:0]' into 'rgb_r_reg[7:0]' [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/new/src_gen.v:225]
+INFO: [Synth 8-4471] merging register 'rgb_b_reg[7:0]' into 'rgb_r_reg[7:0]' [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/new/src_gen.v:226]
+WARNING: [Synth 8-6014] Unused sequential element rgb_g_reg was removed.  [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/new/src_gen.v:225]
+WARNING: [Synth 8-6014] Unused sequential element rgb_b_reg was removed.  [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/new/src_gen.v:226]
+INFO: [Synth 8-256] done synthesizing module 'src_gen' (2#1) [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/new/src_gen.v:22]
+INFO: [Synth 8-638] synthesizing module 'i2c_config' [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_config.v:30]
+	Parameter S_IDLE bound to: 0 - type: integer 
+	Parameter S_WR_I2C_CHECK bound to: 1 - type: integer 
+	Parameter S_WR_I2C bound to: 2 - type: integer 
+	Parameter S_WR_I2C_DONE bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'i2c_master_top' [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_top.v:30]
+	Parameter S_IDLE bound to: 0 - type: integer 
+	Parameter S_WR_DEV_ADDR bound to: 1 - type: integer 
+	Parameter S_WR_REG_ADDR bound to: 2 - type: integer 
+	Parameter S_WR_DATA bound to: 3 - type: integer 
+	Parameter S_WR_ACK bound to: 4 - type: integer 
+	Parameter S_WR_ERR_NACK bound to: 5 - type: integer 
+	Parameter S_RD_DEV_ADDR0 bound to: 6 - type: integer 
+	Parameter S_RD_REG_ADDR bound to: 7 - type: integer 
+	Parameter S_RD_DEV_ADDR1 bound to: 8 - type: integer 
+	Parameter S_RD_DATA bound to: 9 - type: integer 
+	Parameter S_RD_STOP bound to: 10 - type: integer 
+	Parameter S_WR_STOP bound to: 11 - type: integer 
+	Parameter S_WAIT bound to: 12 - type: integer 
+	Parameter S_WR_REG_ADDR1 bound to: 13 - type: integer 
+	Parameter S_RD_REG_ADDR1 bound to: 14 - type: integer 
+	Parameter S_RD_ACK bound to: 15 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_top.v:96]
+INFO: [Synth 8-638] synthesizing module 'i2c_master_byte_ctrl' [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_byte_ctrl.v:75]
+	Parameter ST_IDLE bound to: 5'b00000 
+	Parameter ST_START bound to: 5'b00001 
+	Parameter ST_READ bound to: 5'b00010 
+	Parameter ST_WRITE bound to: 5'b00100 
+	Parameter ST_ACK bound to: 5'b01000 
+	Parameter ST_STOP bound to: 5'b10000 
+INFO: [Synth 8-638] synthesizing module 'i2c_master_bit_ctrl' [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_bit_ctrl.v:143]
+	Parameter idle bound to: 18'b000000000000000000 
+	Parameter start_a bound to: 18'b000000000000000001 
+	Parameter start_b bound to: 18'b000000000000000010 
+	Parameter start_c bound to: 18'b000000000000000100 
+	Parameter start_d bound to: 18'b000000000000001000 
+	Parameter start_e bound to: 18'b000000000000010000 
+	Parameter stop_a bound to: 18'b000000000000100000 
+	Parameter stop_b bound to: 18'b000000000001000000 
+	Parameter stop_c bound to: 18'b000000000010000000 
+	Parameter stop_d bound to: 18'b000000000100000000 
+	Parameter rd_a bound to: 18'b000000001000000000 
+	Parameter rd_b bound to: 18'b000000010000000000 
+	Parameter rd_c bound to: 18'b000000100000000000 
+	Parameter rd_d bound to: 18'b000001000000000000 
+	Parameter wr_a bound to: 18'b000010000000000000 
+	Parameter wr_b bound to: 18'b000100000000000000 
+	Parameter wr_c bound to: 18'b001000000000000000 
+	Parameter wr_d bound to: 18'b010000000000000000 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_bit_ctrl.v:406]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_bit_ctrl.v:406]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_bit_ctrl.v:410]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_bit_ctrl.v:410]
+INFO: [Synth 8-256] done synthesizing module 'i2c_master_bit_ctrl' (3#1) [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_bit_ctrl.v:143]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_byte_ctrl.v:230]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_byte_ctrl.v:230]
+INFO: [Synth 8-256] done synthesizing module 'i2c_master_byte_ctrl' (4#1) [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_byte_ctrl.v:75]
+INFO: [Synth 8-256] done synthesizing module 'i2c_master_top' (5#1) [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_top.v:30]
+WARNING: [Synth 8-5788] Register i2c_write_req_reg in module i2c_config is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_config.v:101]
+WARNING: [Synth 8-3848] Net i2c_read_req in module/entity i2c_config does not have driver. [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_config.v:57]
+INFO: [Synth 8-256] done synthesizing module 'i2c_config' (6#1) [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_config.v:30]
+INFO: [Synth 8-638] synthesizing module 'lut_sil9134' [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/lut_sil9134.v:30]
+INFO: [Synth 8-256] done synthesizing module 'lut_sil9134' (7#1) [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/lut_sil9134.v:30]
+INFO: [Synth 8-256] done synthesizing module 'src' (8#1) [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/new/src.v:23]
+WARNING: [Synth 8-3331] design i2c_master_top has unconnected port i2c_slave_dev_addr[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1022.582 ; gain = 150.695
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin i2c_master_top_m0:i2c_read_req to constant 0 [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_config.v:130]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1022.582 ; gain = 150.695
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'd:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk.dcp' for cell 'sys_clk_u0'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7z015clg485-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk_board.xdc] for cell 'sys_clk_u0/inst'
+Finished Parsing XDC File [d:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk_board.xdc] for cell 'sys_clk_u0/inst'
+Parsing XDC File [d:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk.xdc] for cell 'sys_clk_u0/inst'
+Finished Parsing XDC File [d:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk.xdc] for cell 'sys_clk_u0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/src_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/src_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/constrs_1/new/src.xdc]
+Finished Parsing XDC File [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/constrs_1/new/src.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 1455.605 ; gain = 583.719
+36 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 1455.605 ; gain = 583.719
+close_design
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'src' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj src_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sys_clk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sys_clk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_config.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_config
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_bit_ctrl.v" into library xil_defaultlib
+ERROR: [VRFC 10-452] cannot open include file timescale.v [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_bit_ctrl.v:138]
+INFO: [VRFC 10-311] analyzing module i2c_master_bit_ctrl
+ERROR: [VRFC 10-1040] module i2c_master_bit_ctrl ignored due to previous errors [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_bit_ctrl.v:143]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_src' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_src_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sys_clk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sys_clk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_config.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_config
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_bit_ctrl.v" into library xil_defaultlib
+ERROR: [VRFC 10-452] cannot open include file timescale.v [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_bit_ctrl.v:138]
+INFO: [VRFC 10-311] analyzing module i2c_master_bit_ctrl
+ERROR: [VRFC 10-1040] module i2c_master_bit_ctrl ignored due to previous errors [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_bit_ctrl.v:143]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_src' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_src_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sim_1/new/tb_src.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_src
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto cedcd92339e24fb0a9093dccc457b023 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_src_behav xil_defaultlib.tb_src xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.tb_src
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_src_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim/xsim.dir/tb_src_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Feb  9 23:35:22 2023...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1455.605 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_src_behav -key {Behavioral:sim_1:Functional:tb_src} -tclbatch {tb_src.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source tb_src.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_src_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1455.605 ; gain = 0.000
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1455.605 ; gain = 0.000
+launch_simulation -mode post-synthesis -type functional
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/func/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z015clg485-2
+INFO: [Project 1-454] Reading design checkpoint 'd:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk.dcp' for cell 'sys_clk_u0'
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk_board.xdc] for cell 'sys_clk_u0/inst'
+Finished Parsing XDC File [d:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk_board.xdc] for cell 'sys_clk_u0/inst'
+Parsing XDC File [d:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk.xdc] for cell 'sys_clk_u0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [d:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk.xdc:57]
+get_clocks: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1945.266 ; gain = 489.660
+Finished Parsing XDC File [d:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/ip/sys_clk/sys_clk.xdc] for cell 'sys_clk_u0/inst'
+Parsing XDC File [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/constrs_1/new/src.xdc]
+Finished Parsing XDC File [D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/constrs_1/new/src.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+open_run: Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 1945.266 ; gain = 489.660
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-25] write_verilog -mode funcsim -nolib -force -file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/func/xsim/tb_src_func_synth.v"
+INFO: [SIM-utils-36] Netlist generated:D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/func/xsim/tb_src_func_synth.v
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/func/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_src' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/func/xsim'
+"xvlog --incr --relax -prj tb_src_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/func/xsim/tb_src_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_config
+INFO: [VRFC 10-311] analyzing module i2c_master_bit_ctrl
+INFO: [VRFC 10-311] analyzing module i2c_master_byte_ctrl
+INFO: [VRFC 10-311] analyzing module i2c_master_top
+INFO: [VRFC 10-311] analyzing module src
+INFO: [VRFC 10-311] analyzing module src_gen
+INFO: [VRFC 10-311] analyzing module sys_clk
+INFO: [VRFC 10-311] analyzing module sys_clk_sys_clk_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sim_1/new/tb_src.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_src
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/func/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto cedcd92339e24fb0a9093dccc457b023 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_src_func_synth xil_defaultlib.tb_src xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.FDSE_default
+Compiling module xil_defaultlib.src_gen
+Compiling module unisims_ver.IOBUF
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.FDCE_default
+Compiling module unisims_ver.FDPE_default
+Compiling module xil_defaultlib.i2c_master_bit_ctrl
+Compiling module xil_defaultlib.i2c_master_byte_ctrl
+Compiling module xil_defaultlib.i2c_master_top
+Compiling module xil_defaultlib.i2c_config
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=23.75...
+Compiling module xil_defaultlib.sys_clk_sys_clk_clk_wiz
+Compiling module xil_defaultlib.sys_clk
+Compiling module xil_defaultlib.src
+Compiling module xil_defaultlib.tb_src
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_src_func_synth
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/func/xsim/xsim.dir/tb_src_func_synth/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 51.430 ; gain = 0.520
+INFO: [Common 17-206] Exiting Webtalk at Thu Feb  9 23:39:34 2023...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1945.266 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_src_func_synth -key {Post-Synthesis:sim_1:Functional:tb_src} -tclbatch {tb_src.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source tb_src.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_src_func_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 1955.336 ; gain = 499.730
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1969.375 ; gain = 0.000
+launch_simulation -mode post-synthesis -type timing
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-synthesis timing simulation in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-25] write_verilog -mode timesim -nolib -sdf_anno true -force -file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.v"
+INFO: [SIM-utils-27] Writing SDF file...
+INFO: [SIM-utils-28] write_sdf -mode timesim -process_corner slow -force -file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.sdf"
+INFO: [SIM-utils-36] Netlist generated:D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.v
+INFO: [SIM-utils-37] SDF generated:D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_src' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+"xvlog --incr --relax -prj tb_src_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IOBUF_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module IOBUF_HD1
+INFO: [VRFC 10-311] analyzing module i2c_config
+INFO: [VRFC 10-311] analyzing module i2c_master_bit_ctrl
+INFO: [VRFC 10-311] analyzing module i2c_master_byte_ctrl
+INFO: [VRFC 10-311] analyzing module i2c_master_top
+INFO: [VRFC 10-311] analyzing module src
+INFO: [VRFC 10-311] analyzing module src_gen
+INFO: [VRFC 10-311] analyzing module sys_clk
+INFO: [VRFC 10-311] analyzing module sys_clk_sys_clk_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sim_1/new/tb_src.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_src
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto cedcd92339e24fb0a9093dccc457b023 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_src_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_src xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "tb_src_time_synth.sdf", for root module "tb_src/U1".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "tb_src_time_synth.sdf", for root module "tb_src/U1".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.CARRY4
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.FDSE_default
+Compiling module xil_defaultlib.src_gen
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUFT
+Compiling module xil_defaultlib.IOBUF_UNIQ_BASE_
+Compiling module xil_defaultlib.IOBUF_HD1
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.FDPE_default
+Compiling module xil_defaultlib.i2c_master_bit_ctrl
+Compiling module xil_defaultlib.i2c_master_byte_ctrl
+Compiling module xil_defaultlib.i2c_master_top
+Compiling module xil_defaultlib.i2c_config
+Compiling module simprims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=23.75...
+Compiling module xil_defaultlib.sys_clk_sys_clk_clk_wiz
+Compiling module xil_defaultlib.sys_clk
+Compiling module xil_defaultlib.src
+Compiling module xil_defaultlib.tb_src
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_src_time_synth
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/xsim.dir/tb_src_time_synth/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Feb  9 23:40:59 2023...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1969.375 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_src_time_synth -key {Post-Synthesis:sim_1:Timing:tb_src} -tclbatch {tb_src.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source tb_src.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_src_time_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1969.375 ; gain = 0.000
+run all
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:01:43 ; elapsed = 00:01:04 . Memory (MB): peak = 1969.375 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -mode post-synthesis -type timing
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-synthesis timing simulation in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-25] write_verilog -mode timesim -nolib -sdf_anno true -force -file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.v"
+INFO: [SIM-utils-27] Writing SDF file...
+INFO: [SIM-utils-28] write_sdf -mode timesim -process_corner slow -force -file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.sdf"
+INFO: [SIM-utils-36] Netlist generated:D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.v
+INFO: [SIM-utils-37] SDF generated:D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_src' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+"xvlog --incr --relax -prj tb_src_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IOBUF_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module IOBUF_HD1
+INFO: [VRFC 10-311] analyzing module i2c_config
+INFO: [VRFC 10-311] analyzing module i2c_master_bit_ctrl
+INFO: [VRFC 10-311] analyzing module i2c_master_byte_ctrl
+INFO: [VRFC 10-311] analyzing module i2c_master_top
+INFO: [VRFC 10-311] analyzing module src
+INFO: [VRFC 10-311] analyzing module src_gen
+INFO: [VRFC 10-311] analyzing module sys_clk
+INFO: [VRFC 10-311] analyzing module sys_clk_sys_clk_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sim_1/new/tb_src.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_src
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto cedcd92339e24fb0a9093dccc457b023 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_src_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_src xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "tb_src_time_synth.sdf", for root module "tb_src/U1".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "tb_src_time_synth.sdf", for root module "tb_src/U1".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.CARRY4
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.FDSE_default
+Compiling module xil_defaultlib.src_gen
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUFT
+Compiling module xil_defaultlib.IOBUF_UNIQ_BASE_
+Compiling module xil_defaultlib.IOBUF_HD1
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.FDPE_default
+Compiling module xil_defaultlib.i2c_master_bit_ctrl
+Compiling module xil_defaultlib.i2c_master_byte_ctrl
+Compiling module xil_defaultlib.i2c_master_top
+Compiling module xil_defaultlib.i2c_config
+Compiling module simprims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=23.75...
+Compiling module xil_defaultlib.sys_clk_sys_clk_clk_wiz
+Compiling module xil_defaultlib.sys_clk
+Compiling module xil_defaultlib.src
+Compiling module xil_defaultlib.tb_src
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_src_time_synth
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1969.375 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_src_time_synth -key {Post-Synthesis:sim_1:Timing:tb_src} -tclbatch {tb_src.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source tb_src.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_src_time_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1969.375 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_simulation -simset sim_1 -mode post-synthesis -type timing
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation -mode post-synthesis -type timing
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-synthesis timing simulation in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-25] write_verilog -mode timesim -nolib -sdf_anno true -force -file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.v"
+INFO: [SIM-utils-27] Writing SDF file...
+INFO: [SIM-utils-28] write_sdf -mode timesim -process_corner slow -force -file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.sdf"
+INFO: [SIM-utils-36] Netlist generated:D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.v
+INFO: [SIM-utils-37] SDF generated:D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_src' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+"xvlog --incr --relax -prj tb_src_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IOBUF_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module IOBUF_HD1
+INFO: [VRFC 10-311] analyzing module i2c_config
+INFO: [VRFC 10-311] analyzing module i2c_master_bit_ctrl
+INFO: [VRFC 10-311] analyzing module i2c_master_byte_ctrl
+INFO: [VRFC 10-311] analyzing module i2c_master_top
+INFO: [VRFC 10-311] analyzing module src
+INFO: [VRFC 10-311] analyzing module src_gen
+INFO: [VRFC 10-311] analyzing module sys_clk
+INFO: [VRFC 10-311] analyzing module sys_clk_sys_clk_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sim_1/new/tb_src.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_src
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto cedcd92339e24fb0a9093dccc457b023 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_src_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_src xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "tb_src_time_synth.sdf", for root module "tb_src/U1".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "tb_src_time_synth.sdf", for root module "tb_src/U1".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.CARRY4
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.FDSE_default
+Compiling module xil_defaultlib.src_gen
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUFT
+Compiling module xil_defaultlib.IOBUF_UNIQ_BASE_
+Compiling module xil_defaultlib.IOBUF_HD1
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.FDPE_default
+Compiling module xil_defaultlib.i2c_master_bit_ctrl
+Compiling module xil_defaultlib.i2c_master_byte_ctrl
+Compiling module xil_defaultlib.i2c_master_top
+Compiling module xil_defaultlib.i2c_config
+Compiling module simprims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=23.75...
+Compiling module xil_defaultlib.sys_clk_sys_clk_clk_wiz
+Compiling module xil_defaultlib.sys_clk
+Compiling module xil_defaultlib.src
+Compiling module xil_defaultlib.tb_src
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_src_time_synth
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/xsim.dir/tb_src_time_synth/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Feb  9 23:52:15 2023...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1969.375 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_src_time_synth -key {Post-Synthesis:sim_1:Timing:tb_src} -tclbatch {tb_src.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source tb_src.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_src_time_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 1969.375 ; gain = 0.000
+run 1 ms
+run 1 ms
+run 10000 us
+run 10000 us
+run 10000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1969.375 ; gain = 0.000
+launch_simulation -mode post-synthesis -type timing
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-synthesis timing simulation in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-25] write_verilog -mode timesim -nolib -sdf_anno true -force -file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.v"
+INFO: [SIM-utils-27] Writing SDF file...
+INFO: [SIM-utils-28] write_sdf -mode timesim -process_corner slow -force -file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.sdf"
+INFO: [SIM-utils-36] Netlist generated:D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.v
+INFO: [SIM-utils-37] SDF generated:D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_src' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+"xvlog --incr --relax -prj tb_src_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim/tb_src_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IOBUF_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module IOBUF_HD1
+INFO: [VRFC 10-311] analyzing module i2c_config
+INFO: [VRFC 10-311] analyzing module i2c_master_bit_ctrl
+INFO: [VRFC 10-311] analyzing module i2c_master_byte_ctrl
+INFO: [VRFC 10-311] analyzing module i2c_master_top
+INFO: [VRFC 10-311] analyzing module src
+INFO: [VRFC 10-311] analyzing module src_gen
+INFO: [VRFC 10-311] analyzing module sys_clk
+INFO: [VRFC 10-311] analyzing module sys_clk_sys_clk_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sim_1/new/tb_src.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_src
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto cedcd92339e24fb0a9093dccc457b023 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_src_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_src xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "tb_src_time_synth.sdf", for root module "tb_src/U1".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "tb_src_time_synth.sdf", for root module "tb_src/U1".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.CARRY4
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.FDSE_default
+Compiling module xil_defaultlib.src_gen
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUFT
+Compiling module xil_defaultlib.IOBUF_UNIQ_BASE_
+Compiling module xil_defaultlib.IOBUF_HD1
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.FDPE_default
+Compiling module xil_defaultlib.i2c_master_bit_ctrl
+Compiling module xil_defaultlib.i2c_master_byte_ctrl
+Compiling module xil_defaultlib.i2c_master_top
+Compiling module xil_defaultlib.i2c_config
+Compiling module simprims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=23.75...
+Compiling module xil_defaultlib.sys_clk_sys_clk_clk_wiz
+Compiling module xil_defaultlib.sys_clk
+Compiling module xil_defaultlib.src
+Compiling module xil_defaultlib.tb_src
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_src_time_synth
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1969.375 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Xilinx/Projects/class_hdmi/class_hdmi.sim/sim_1/synth/timing/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_src_time_synth -key {Post-Synthesis:sim_1:Timing:tb_src} -tclbatch {tb_src.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source tb_src.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_src_time_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1969.375 ; gain = 0.000
+run 10000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Fri Feb 10 00:08:46 2023] Launched synth_1...
+Run output will be captured here: D:/Xilinx/Projects/class_hdmi/class_hdmi.runs/synth_1/runme.log
+close_design
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 10 00:10:55 2023...

@@ -31,7 +31,6 @@ set_property ip_output_repo d:/Xilinx/Projects/class_hdmi/class_hdmi.cache/ip [c
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_config.v
-  D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/timescale.v
   D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_defines.v
   D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_bit_ctrl.v
   D:/Xilinx/Projects/class_hdmi/class_hdmi.srcs/sources_1/i2c_master/i2c_master_byte_ctrl.v

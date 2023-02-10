@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../class_hdmi.srcs/sources_1/ip/sys_clk" \
+"../../../../class_hdmi.srcs/sim_1/new/tb_src.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
